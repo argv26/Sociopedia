@@ -78,9 +78,9 @@ const Navbar = () => {
         <FlexBetween gap="2rem">
           <IconButton onClick={() => dispatch(setMode())}>
             {theme.palette.mode === "dark" ? (
-              <DarkMode sx={{ fontSize: "25px" }} />
+              <LightMode sx={{ fontSize: "25px" }} />
             ) : (
-              <LightMode sx={{ color: dark, fontSize: "25px" }} />
+              <DarkMode sx={{ color: dark, fontSize: "25px" }} />
             )}
           </IconButton>
           <Message sx={{ fontSize: "25px" }} />
@@ -91,7 +91,6 @@ const Navbar = () => {
               value={fullName}
               sx={{
                 backgroundColor: neutralLight,
-                width: "150px",
                 borderRadius: "0.25rem",
                 p: "0.25rem 1rem",
                 "& .MuiSvgIcon-root": {
@@ -107,7 +106,9 @@ const Navbar = () => {
               <MenuItem value={fullName}>
                 <Typography>{fullName}</Typography>
               </MenuItem>
-              <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
+              <MenuItem onClick={() => dispatch(setLogout())}>
+                Log Out
+              </MenuItem>
             </Select>
           </FormControl>
         </FlexBetween>

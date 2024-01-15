@@ -161,6 +161,7 @@ const MyPostWidget = ({ picturePath }) => {
             color: palette.background.alt,
             backgroundColor: palette.primary.main,
             borderRadius: "3rem",
+            textcolor: palette.background.dark
           }}
         >
           POST

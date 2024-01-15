@@ -11,6 +11,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setPost } from "state";
+import AddComment from "components/AddComment";
 
 const PostWidget = ({
   postId,
@@ -102,7 +103,9 @@ const PostWidget = ({
               </Typography>
             </Box>
           ))}
-          <Divider />
+          <AddComment
+            postId={postId}
+          />
         </Box>
       )}
     </WidgetWrapper>
